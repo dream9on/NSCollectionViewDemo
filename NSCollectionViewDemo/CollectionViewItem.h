@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewItem : NSCollectionViewItem
 
+@property (nonatomic,assign) BOOL isSelected;
+
 @property NSString * info;
 @property (weak) IBOutlet NSTextField *lbl_label1;
 - (IBAction)Btn_Start:(NSButton *)sender;

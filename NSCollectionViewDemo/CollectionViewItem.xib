@@ -14,13 +14,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+        <customView id="Hz6-mo-xeY" customClass="CollectionViewItemView">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGJ-QV-ohe">
-                    <rect key="frame" x="60" y="71" width="81" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cGJ-QV-ohe">
+                    <rect key="frame" x="35" y="68" width="81" height="32"/>
                     <buttonCell key="cell" type="push" title="START" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cah-Eh-YLg">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -29,9 +28,8 @@
                         <action selector="Btn_Start:" target="-2" id="TpW-0L-fky"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-yi-pHJ">
-                    <rect key="frame" x="81" y="154" width="37" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-yi-pHJ">
+                    <rect key="frame" x="57" y="128" width="37" height="17"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="TJ7-aE-pGH">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -42,7 +40,13 @@
                     </connections>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="71" y="-23"/>
+            <constraints>
+                <constraint firstItem="eZW-yi-pHJ" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="GPI-mm-mOn"/>
+                <constraint firstItem="eZW-yi-pHJ" firstAttribute="centerX" secondItem="cGJ-QV-ohe" secondAttribute="centerX" id="NXw-bg-IHn"/>
+                <constraint firstItem="cGJ-QV-ohe" firstAttribute="top" secondItem="eZW-yi-pHJ" secondAttribute="bottom" constant="32" id="SPM-8R-Jit"/>
+                <constraint firstItem="eZW-yi-pHJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="55" id="q4H-B7-zFc"/>
+            </constraints>
+            <point key="canvasLocation" x="-194" y="-234"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="D2c-Yb-JJl"/>
     </objects>

@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewItem.h"
+#import "CollectionViewItemView.h"
 
 @interface CollectionViewItem ()
 
@@ -19,12 +20,20 @@
     // Do view setup here.
     
     self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor systemRedColor].CGColor;
+    self.view.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
     
-   // self.lbl_label1.stringValue = _info;
+    NSLog(@"viewDidLoad....");
+    // self.lbl_label1.stringValue = _info;
 }
 
 - (IBAction)Btn_Start:(NSButton *)sender {
     self.lbl_label1.intValue++;
+}
+
+-(void)setSelected:(BOOL)selected
+{
+    [(CollectionViewItemView *)[self view] setIsSelected:selected];
+    
+    [super setSelected:selected];
 }
 @end
