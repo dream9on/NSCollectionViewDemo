@@ -706,14 +706,14 @@
         <scene sceneID="CTA-do-iYT">
             <objects>
                 <collectionViewItem id="xJf-n3-pAF" customClass="CollectionViewItem" sceneMemberID="viewController">
-                    <view key="view" id="V0M-NY-pWR">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                    <view key="view" id="V0M-NY-pWR" customClass="CollectionViewItemView">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </collectionViewItem>
                 <customObject id="Atq-ZM-KtA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="750"/>
+            <point key="canvasLocation" x="473" y="704"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -734,6 +734,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="ltN-EU-osq">
                                                 <size key="itemSize" width="150" height="200"/>
+                                                <edgeInsets key="sectionInset" left="2" right="0.0" top="2" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <connections>

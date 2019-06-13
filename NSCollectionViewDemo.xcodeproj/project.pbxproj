@@ -15,6 +15,8 @@
 		DE9474F122B08B7C00D8DCB9 /* CollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9474EF22B08B7C00D8DCB9 /* CollectionViewItem.m */; };
 		DE9474F222B08B7C00D8DCB9 /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9474F022B08B7C00D8DCB9 /* CollectionViewItem.xib */; };
 		DE94751A22B0FC6B00D8DCB9 /* CollectionViewItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94751922B0FC6B00D8DCB9 /* CollectionViewItemView.m */; };
+		DE94751E22B241CE00D8DCB9 /* DetailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94751C22B241CE00D8DCB9 /* DetailWindowController.m */; };
+		DE94751F22B241CE00D8DCB9 /* DetailWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE94751D22B241CE00D8DCB9 /* DetailWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		DE9474F022B08B7C00D8DCB9 /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
 		DE94751822B0FC6B00D8DCB9 /* CollectionViewItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewItemView.h; sourceTree = "<group>"; };
 		DE94751922B0FC6B00D8DCB9 /* CollectionViewItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewItemView.m; sourceTree = "<group>"; };
+		DE94751B22B241CE00D8DCB9 /* DetailWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWindowController.h; sourceTree = "<group>"; };
+		DE94751C22B241CE00D8DCB9 /* DetailWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailWindowController.m; sourceTree = "<group>"; };
+		DE94751D22B241CE00D8DCB9 /* DetailWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,9 @@
 				DE9474F022B08B7C00D8DCB9 /* CollectionViewItem.xib */,
 				DE94751822B0FC6B00D8DCB9 /* CollectionViewItemView.h */,
 				DE94751922B0FC6B00D8DCB9 /* CollectionViewItemView.m */,
+				DE94751B22B241CE00D8DCB9 /* DetailWindowController.h */,
+				DE94751C22B241CE00D8DCB9 /* DetailWindowController.m */,
+				DE94751D22B241CE00D8DCB9 /* DetailWindowController.xib */,
 				DE9474E022B08B1B00D8DCB9 /* Assets.xcassets */,
 				DE9474E222B08B1C00D8DCB9 /* Main.storyboard */,
 				DE9474E522B08B1C00D8DCB9 /* Info.plist */,
@@ -142,6 +150,7 @@
 			files = (
 				DE9474E122B08B1B00D8DCB9 /* Assets.xcassets in Resources */,
 				DE9474E422B08B1C00D8DCB9 /* Main.storyboard in Resources */,
+				DE94751F22B241CE00D8DCB9 /* DetailWindowController.xib in Resources */,
 				DE9474F222B08B7C00D8DCB9 /* CollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +164,7 @@
 			files = (
 				DE9474DF22B08B1A00D8DCB9 /* ViewController.m in Sources */,
 				DE9474F122B08B7C00D8DCB9 /* CollectionViewItem.m in Sources */,
+				DE94751E22B241CE00D8DCB9 /* DetailWindowController.m in Sources */,
 				DE9474E722B08B1C00D8DCB9 /* main.m in Sources */,
 				DE94751A22B0FC6B00D8DCB9 /* CollectionViewItemView.m in Sources */,
 				DE9474DC22B08B1A00D8DCB9 /* AppDelegate.m in Sources */,

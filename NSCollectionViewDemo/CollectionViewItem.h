@@ -16,10 +16,11 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "CollectionViewItemView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CollectionViewItem : NSCollectionViewItem
+@interface CollectionViewItem : NSCollectionViewItem<NSCollectionViewItemViewDelegate>
 
 @property NSString * info;
 @property (weak) IBOutlet NSTextField *lbl_label1;

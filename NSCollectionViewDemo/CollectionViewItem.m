@@ -7,7 +7,7 @@
 //
 
 #import "CollectionViewItem.h"
-#import "CollectionViewItemView.h"
+
 
 @interface CollectionViewItem ()
 
@@ -21,7 +21,7 @@
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
-    
+    [(CollectionViewItemView *)[self view] setDelegate:self];
     NSLog(@"viewDidLoad....");
 }
 
@@ -34,5 +34,10 @@
     [(CollectionViewItemView *)[self view] setIsSelected:selected];
     
     [super setSelected:selected];
+}
+
+-(void)showDetailWindow
+{
+    NSLog(@"show Detail window.");
 }
 @end
