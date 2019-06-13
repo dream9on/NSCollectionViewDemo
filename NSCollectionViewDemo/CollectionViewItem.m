@@ -23,7 +23,6 @@
     self.view.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
     
     NSLog(@"viewDidLoad....");
-    // self.lbl_label1.stringValue = _info;
 }
 
 - (IBAction)Btn_Start:(NSButton *)sender {

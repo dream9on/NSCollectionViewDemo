@@ -26,10 +26,10 @@
         fillColor = [NSColor clearColor];
         strokeColor = [NSColor colorWithCalibratedRed: 0.749 green: 0.749 blue: 0.749 alpha: 1];
     }
-    [fillColor setStroke];  // 设置线条颜色
-    [imageRoundedRectanglePath stroke];  //画外围线条
+    [fillColor setStroke];              // 设置边框颜色
+    [imageRoundedRectanglePath stroke];  //绘制边框颜色
     
-    //    [strokeColor setFill];  // 设置填充颜色
+    //    [strokeColor setFill];             //设置填充颜色
     //    [imageRoundedRectanglePath fill];  //填充内部颜色
 
     NSLog(@"drawRect...");
@@ -39,11 +39,7 @@
 -(void)setIsSelected:(BOOL)isSelected
 {
     _isSelected=isSelected;
-    
-    NSLog(@"setIsSelected...");
-    [self setNeedsDisplay:YES];
-    
-    
+    [self setNeedsDisplay:YES];  // UI重绘会重新调用drawRect
 }
 
 @end
