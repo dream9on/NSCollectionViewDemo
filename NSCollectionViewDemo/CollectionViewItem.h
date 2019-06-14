@@ -17,15 +17,21 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CollectionViewItemView.h"
+#import "DetailWindowController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewItem : NSCollectionViewItem<NSCollectionViewItemViewDelegate>
+{
+    DetailWindowController *detailWindowController;
+    NSMutableArray *detailWindowDataSource;         // detailWindow's datasource
+}
 
-@property NSString * info;
+@property (assign)NSString * info;
 @property (weak) IBOutlet NSTextField *lbl_label1;
 - (IBAction)Btn_Start:(NSButton *)sender;
 
+@property (assign) DetailWindowController *detailWindowController;
 @end
 
 NS_ASSUME_NONNULL_END

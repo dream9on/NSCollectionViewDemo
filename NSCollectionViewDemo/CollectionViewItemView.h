@@ -11,6 +11,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define ColorWithRGB(colorCode)     [NSColor colorWithDeviceRed:((colorCode>>16)&0xFF)/255.0 green:((colorCode>>8)&0xFF)/255.0 blue:((colorCode)&0xFF)/255.0 alpha:1.0];
+
+#define DEFAULTCOLOR      ColorWithRGB(0x3399FF)
+
 NS_ASSUME_NONNULL_BEGIN
 @protocol NSCollectionViewItemViewDelegate <NSObject>
 

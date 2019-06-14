@@ -13,6 +13,7 @@
     NSMutableArray *datasource;
 }
 - (IBAction)Btn_Click:(NSButton *)sender;
+- (IBAction)Btn_Remove:(NSButton *)sender;
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 

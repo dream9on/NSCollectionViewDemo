@@ -14,6 +14,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    @autoreleasepool {
     NSRect imageRect = NSMakeRect(5,5,self.frame.size.width -10,self.frame.size.height -10);
     NSBezierPath* imageRoundedRectanglePath = [NSBezierPath bezierPathWithRoundedRect:imageRect xRadius: 4 yRadius: 4];
     NSColor* fillColor = nil;
@@ -28,14 +29,15 @@
     [imageRoundedRectanglePath stroke];  //绘制边框颜色
     
     if (_isMouseEntered) {
-        fillColor = [NSColor colorWithCalibratedRed: 0xFF/255.0 green: 0x99/255.0 blue: 0 alpha: 0.5];
+        //fillColor = [NSColor colorWithCalibratedRed: 0xFF/255.0 green: 0x99/255.0 blue: 0 alpha: 0.5];
+        fillColor = DEFAULTCOLOR;
     }else{
         fillColor = [NSColor clearColor];
     }
     [fillColor setFill];             //设置填充颜色
     [imageRoundedRectanglePath fill];  //填充内部颜色
 
-    NSLog(@"drawRect...");
+    //NSLog(@"drawRect...");
     // Drawing code here.
     
     // 只添加一次监控区域，防止每次刷新UI添加一个
@@ -55,6 +57,7 @@
                                                           userInfo:nil];
         [self addTrackingArea:area];
     }
+    }
     //[self becomeFirstResponder];
 }
 
@@ -69,7 +72,7 @@
 -(void)mouseEntered:(NSEvent *)event
 {
     [super mouseEntered:event];
-    NSLog(@"MouseEntered.");
+    //NSLog(@"MouseEntered.");
     _isMouseEntered = YES;
     self.layer.backgroundColor = [NSColor systemYellowColor].CGColor;
     
@@ -86,7 +89,7 @@
 
 -(void)mouseExited:(NSEvent *)event
 {
-    NSLog(@"MouseExited.");
+    //NSLog(@"MouseExited.");
     _isMouseEntered = NO;
     self.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
     [self setNeedsDisplay:YES];
@@ -95,7 +98,6 @@
 -(void)mouseMoved:(NSEvent *)event
 {
     [super mouseMoved:event];
-    NSLog(@"MouseMoved.");
 }
 
 -(void)mouseDown:(NSEvent *)event
@@ -104,14 +106,13 @@
     //event.clickCount 不是累计数。双击时调用mouseDown 两次，clickCount 第一次=1，第二次 = 2。
     if ([event clickCount] > 1) {
         //双击相关处理
-        NSLog(@"双击...");
-        
+        //NSLog(@"双击...");
         [_delegate showDetailWindow];
         
     }else return;
     
-    NSLog(@"mouseDown ========== clickCount：%ld buttonNumber：%ld",event.clickCount,event.buttonNumber);
-    self.layer.backgroundColor = [NSColor redColor].CGColor;
+    //NSLog(@"mouseDown ========== clickCount：%ld buttonNumber：%ld",event.clickCount,event.buttonNumber);
+    self.layer.backgroundColor = [NSColor systemPinkColor].CGColor;
     
     //获取鼠标点击位置坐标：先获取event发生的window中的坐标，在转换成view视图坐标系的坐标。
     NSPoint eventLocation = [event locationInWindow];
@@ -126,4 +127,18 @@
         NSLog(@"按下了Command键 ------ ");
     }
 }
+
+/*
+-(void)updateLayer
+{
+    NSLog(@"updateLayer");
+    
+}
+
+-(void)layout
+{
+    
+}
+ */
+
 @end

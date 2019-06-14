@@ -50,4 +50,11 @@
     
     [self.collectionView reloadData];
 }
+
+- (IBAction)Btn_Remove:(NSButton *)sender {
+    
+    CollectionViewItem *item = [datasource lastObject];
+    [datasource removeLastObject];
+    [self.collectionView reloadData];
+}
 @end
