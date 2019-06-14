@@ -19,26 +19,26 @@
     [super viewDidLoad];
     // Do view setup here.
     
-    @autoreleasepool {
-    
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
     [(CollectionViewItemView *)(self.view) setDelegate:self];
     
-    detailWindowController = [[DetailWindowController alloc] initWithWindowNibName:@"DetailWindowController"];
+    //_detailWindowController = [[DetailWindowController alloc] initWithWindowNibName:@"DetailWindowController"];
+    _detailWindowController = [[DetailWindowController alloc] init];
     detailWindowDataSource = [NSMutableArray array];
     
-    [detailWindowDataSource addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:@1,@"ID",@"ITEM1",@"ITEM", nil]];
-    detailWindowController.dataSource =detailWindowDataSource;
+    [detailWindowDataSource addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys: @1,@"ID",
+                                                                                         @"ITEM1",@"ITEM",
+                                                                                         @"0.5",@"LowerLimit",
+                                                                                         @"999",@"UpperLimit", nil]];
+    _detailWindowController.dataSource =detailWindowDataSource;
      
-    NSLog(@"viewDidLoad....");
-    }
+    NSLog(@"collectionViewItem viewDidLoad....");
 }
 
 - (IBAction)Btn_Start:(NSButton *)sender {
     self.lbl_label1.intValue++;
-    
-    detailWindowController.lbl_info.stringValue = [NSString stringWithFormat:@"Info ID :%@",_info];
+    _detailWindowController.lbl_info.stringValue = [NSString stringWithFormat:@"Info ID :%@",_info];
 }
 
 -(void)setSelected:(BOOL)selected
@@ -53,13 +53,7 @@
     NSLog(@"show Detail window.");
     
     //[detailWindowController showWindow:self];
-    [detailWindowController.window makeKeyAndOrderFront:self];
+    [_detailWindowController.window makeKeyAndOrderFront:self];
 }
-
--(void)dealloc
-{
-    NSLog(@"Collection view item dealloc");
-}
-
 
 @end

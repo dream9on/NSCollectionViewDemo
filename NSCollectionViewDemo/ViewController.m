@@ -15,7 +15,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    datasource = [NSMutableArray array];
+    datasource = [[NSMutableArray alloc] init];
     
     [self.collectionView setSelectable:YES];
 }
@@ -47,14 +47,13 @@
     CollectionViewItem *item = [[CollectionViewItem alloc] init];
     //item.info = @"Info";
     [datasource addObject:item];
-    
     [self.collectionView reloadData];
 }
 
 - (IBAction)Btn_Remove:(NSButton *)sender {
-    
     CollectionViewItem *item = [datasource lastObject];
     [datasource removeLastObject];
+    [item.detailWindowController close];
     [self.collectionView reloadData];
 }
 @end

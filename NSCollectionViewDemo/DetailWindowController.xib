@@ -177,7 +177,8 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="-92" y="114.5"/>
+            <point key="canvasLocation" x="-670" y="97"/>
         </window>
+        <customObject id="jbT-ma-oYi" customClass="DetailWindowController"/>
     </objects>
 </document>

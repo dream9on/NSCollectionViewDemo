@@ -128,17 +128,4 @@
     }
 }
 
-/*
--(void)updateLayer
-{
-    NSLog(@"updateLayer");
-    
-}
-
--(void)layout
-{
-    
-}
- */
-
 @end

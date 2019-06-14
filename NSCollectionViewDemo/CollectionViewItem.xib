@@ -48,6 +48,7 @@
             </constraints>
             <point key="canvasLocation" x="-194" y="-234"/>
         </customView>
+        <customObject id="4k1-Cr-igW" customClass="CollectionViewItem"/>
         <userDefaultsController representsSharedInstance="YES" id="D2c-Yb-JJl"/>
     </objects>
 </document>

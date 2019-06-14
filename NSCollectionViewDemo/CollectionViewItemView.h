@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
     BOOL _isSelected;
     BOOL _isMouseEntered;
 }
-@property (nonatomic,strong) id<NSCollectionViewItemViewDelegate> delegate;
+@property (nonatomic,assign) id<NSCollectionViewItemViewDelegate> delegate;
 @property (nonatomic,assign) BOOL isSelected;
 @end
 

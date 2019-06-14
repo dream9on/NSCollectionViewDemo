@@ -23,7 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewItem : NSCollectionViewItem<NSCollectionViewItemViewDelegate>
 {
-    DetailWindowController *detailWindowController;
     NSMutableArray *detailWindowDataSource;         // detailWindow's datasource
 }
 
@@ -31,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak) IBOutlet NSTextField *lbl_label1;
 - (IBAction)Btn_Start:(NSButton *)sender;
 
-@property (assign) DetailWindowController *detailWindowController;
+@property (nonatomic) DetailWindowController *detailWindowController;
 @end
 
 NS_ASSUME_NONNULL_END
