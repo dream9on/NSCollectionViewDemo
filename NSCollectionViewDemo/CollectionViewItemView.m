@@ -46,7 +46,7 @@
         // 添加鼠标事件 监控区域
         NSTrackingArea *area =[[NSTrackingArea alloc] initWithRect:dirtyRect
                                                            options:NSTrackingMouseEnteredAndExited|
-                                                                   //NSTrackingMouseMoved|
+                                                                   NSTrackingMouseMoved|
                                                                    //NSTrackingCursorUpdate|
                                                                    NSTrackingActiveAlways|
                                                                    //NSTrackingActiveInActiveApp|
@@ -93,11 +93,19 @@
     _isMouseEntered = NO;
     self.layer.backgroundColor = [NSColor systemBlueColor].CGColor;
     [self setNeedsDisplay:YES];
+    
+    //[NSCursor setHiddenUntilMouseMoves:NO];
 }
 
 -(void)mouseMoved:(NSEvent *)event
 {
     [super mouseMoved:event];
+    
+    // 设置鼠标悬停--延时1s隐藏
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (uint64)(1.5*NSEC_PER_SEC)), queue, ^{
+        [NSCursor setHiddenUntilMouseMoves:YES];
+    });
 }
 
 -(void)mouseDown:(NSEvent *)event

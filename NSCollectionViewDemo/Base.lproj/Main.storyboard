@@ -707,17 +707,17 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="765" height="495"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-Vy-2Uk">
-                                <rect key="frame" x="20" y="32" width="440" height="218"/>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-Vy-2Uk">
+                                <rect key="frame" x="20" y="32" width="725" height="443"/>
                                 <clipView key="contentView" drawsBackground="NO" id="3hU-Eh-d4e">
-                                    <rect key="frame" x="1" y="1" width="438" height="216"/>
+                                    <rect key="frame" x="1" y="1" width="723" height="441"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" allowsMultipleSelection="YES" id="LLV-JE-Ekg">
-                                            <rect key="frame" x="0.0" y="0.0" width="438" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="723" height="441"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="ltN-EU-osq">
                                                 <size key="itemSize" width="150" height="200"/>
@@ -732,18 +732,18 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="doa-Ve-dtK">
-                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tVz-sY-p2L">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <rect key="frame" x="708" y="1" width="16" height="441"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5sK-5o-eyn">
-                                <rect key="frame" x="14" y="-1" width="190" height="32"/>
+                                <rect key="frame" x="14" y="-1" width="229" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="178" id="bMT-X6-r3A"/>
+                                    <constraint firstAttribute="width" constant="217" id="0eV-uV-Xfj"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Add a View Item" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tVa-Le-xKo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -754,7 +754,10 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YFg-Gn-k6v">
-                                <rect key="frame" x="268" y="-1" width="198" height="32"/>
+                                <rect key="frame" x="515" y="-1" width="236" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="wV7-bA-APc"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Remove a View Item" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GE4-Hk-jMh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -765,15 +768,14 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="5sK-5o-eyn" firstAttribute="leading" secondItem="fEz-Vy-2Uk" secondAttribute="leading" id="1j4-bc-GoX"/>
                             <constraint firstAttribute="trailing" secondItem="fEz-Vy-2Uk" secondAttribute="trailing" constant="20" symbolic="YES" id="83b-MJ-FbP"/>
+                            <constraint firstItem="YFg-Gn-k6v" firstAttribute="trailing" secondItem="fEz-Vy-2Uk" secondAttribute="trailing" id="9Zl-Ly-OAI"/>
                             <constraint firstAttribute="bottom" secondItem="fEz-Vy-2Uk" secondAttribute="bottom" constant="32" id="C22-21-K41"/>
-                            <constraint firstItem="YFg-Gn-k6v" firstAttribute="trailing" secondItem="fEz-Vy-2Uk" secondAttribute="trailing" id="IMv-aO-L9i"/>
-                            <constraint firstItem="5sK-5o-eyn" firstAttribute="leading" secondItem="fEz-Vy-2Uk" secondAttribute="leading" id="NDz-Zs-p1v"/>
-                            <constraint firstItem="5sK-5o-eyn" firstAttribute="top" secondItem="fEz-Vy-2Uk" secondAttribute="bottom" constant="5" id="aoB-OB-OBU"/>
                             <constraint firstItem="fEz-Vy-2Uk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="cCt-Hn-OAg"/>
+                            <constraint firstItem="5sK-5o-eyn" firstAttribute="top" secondItem="fEz-Vy-2Uk" secondAttribute="bottom" constant="5" id="hiQ-RH-m94"/>
                             <constraint firstItem="fEz-Vy-2Uk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="jMG-3f-Xmg"/>
-                            <constraint firstItem="YFg-Gn-k6v" firstAttribute="leading" secondItem="5sK-5o-eyn" secondAttribute="trailing" constant="76" id="rSD-cj-xtU"/>
-                            <constraint firstItem="5sK-5o-eyn" firstAttribute="baseline" secondItem="YFg-Gn-k6v" secondAttribute="baseline" id="zND-UK-ymg"/>
+                            <constraint firstItem="5sK-5o-eyn" firstAttribute="baseline" secondItem="YFg-Gn-k6v" secondAttribute="baseline" id="z0Y-iG-8IM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -782,7 +784,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="704"/>
+            <point key="canvasLocation" x="202.5" y="816.5"/>
         </scene>
     </scenes>
 </document>
